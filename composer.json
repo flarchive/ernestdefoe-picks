@@ -1,0 +1,58 @@
+{
+    "name": "ernestdefoe/picks",
+    "description": "College football pick'em game for Flarum.",
+    "type": "flarum-extension",
+    "keywords": [
+        "flarum",
+        "extension",
+        "pickem",
+        "college football",
+        "cfb",
+        "sports"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ernestdefoe",
+            "email": "ernestdefoe@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/ernestdefoe/picks/issues",
+        "source": "https://github.com/ernestdefoe/picks"
+    },
+    "require": {
+        "flarum/core": "^2.0.0-beta.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Resofire\\Picks\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Picks",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-football",
+                "backgroundColor": "#69c6b9",
+                "color": "#1A2744"
+            }
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": true,
+                "forum": true,
+                "js": true,
+                "jsCommon": true,
+                "css": true,
+                "gitConf": true,
+                "typescript": true,
+                "backendTesting": false,
+                "editorConfig": true
+            }
+        }
+    },
+    "minimum-stability": "beta",
+    "prefer-stable": true
+}
