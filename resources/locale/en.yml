@@ -1,0 +1,191 @@
+ernestdefoe-picks:
+
+  admin:
+
+    nav:
+      picks: Picks
+      teams: Teams
+      sync: Sync & Settings
+      seasons: Seasons & Weeks
+      games: Games
+      scores: Leaderboard & Scores
+      stats: Stats
+      settings: Picks Settings
+
+    page:
+      description: College football pick'em management
+
+    permissions:
+      manage: Manage Picks
+      make_picks: Make Picks
+      view: View Picks
+      view_history: "View members' Picks History"
+
+    common:
+      save: Save
+      edit: Edit
+      delete: Delete
+      cancel: Cancel
+      last_sync: Last sync
+      coming_soon: This section will be available in a future update.
+
+    teams:
+      edit_title: Edit Team
+      sync_button: Sync Teams
+      sync_logos_button: Sync Logos
+      search_placeholder: Search teams...
+      all_conferences: All Conferences
+      logo_filter_all: "Logo: All"
+      logo_filter_has: Has Logo
+      logo_filter_missing: Missing Logo
+      logo_filter_custom: Custom Logo
+      total_label: teams
+      no_teams: No teams found.
+      refresh_logo: Re-download logos from ESPN
+      col_logo: Logo
+      col_name: Team
+      col_conference: Conference
+      col_abbrev: Abbrev
+      col_logo_status: Logo Status
+      fields:
+        name: Team Name
+        abbreviation: Abbreviation
+        conference: Conference
+        logo_standard: Standard Logo Path / URL
+        logo_dark: Dark Logo Path / URL
+        logo_custom: Custom Logo (protect from sync)
+        logo_custom_help: When checked, the sync process will never overwrite this team's logos.
+
+    seasons:
+      sync_button: Sync Schedule
+      seasons_label: seasons
+      no_weeks: No weeks found. Click Sync Schedule to import.
+      col_week: Week
+      col_type: Type
+      col_dates: Dates
+      col_name: Name
+
+    sync:
+      status_title: Last Sync Status
+      last_teams: Teams
+      last_schedule: Schedule
+      last_scores: Scores
+      api_title: API Configuration
+      cfbd_api_key: CFBD API Key
+      cfbd_api_key_help: Get your free API key at collegefootballdata.com
+      season_year: Season Year
+      season_year_help: The year to sync teams, schedule, and scores for.
+      conference_filter: Conference Filter
+      conference_filter_help: Leave blank to sync all FBS teams. Enter a conference abbreviation (e.g. SEC) to limit syncs to one conference.
+      options_title: Sync Options
+      sync_regular_season: Sync regular season games
+      sync_postseason: Sync postseason / bowl games
+
+      danger_title: Danger Zone
+      danger_description: These actions are irreversible. Use with caution.
+      reset_schedule_title: Reset Schedule Data
+      reset_schedule_description: Deletes all seasons, weeks, games, picks, and scores. Teams and logos are kept.
+      reset_schedule_button: Reset Schedule
+      reset_all_title: Reset All Data
+      reset_all_description: Deletes everything — teams, logos, seasons, weeks, games, picks, and scores. Requires double confirmation.
+      reset_all_button: Reset Everything
+
+    settings:
+      locking_title: Pick Locking
+      nav_label: Sidebar nav label
+      nav_label_help: The name shown in the forum sidebar navigation. Default is "Picks".
+      lock_offset: Lock picks before kickoff
+      lock_offset_help: Set to 0 to lock picks exactly at kickoff. Increase to require picks be submitted earlier.
+      minutes_before_kickoff: minutes before kickoff
+      minutes: minutes
+      auto_unlock_weeks: Automatically unlock the next week when the previous week is complete
+      auto_unlock_weeks_help: When enabled, the next week will automatically open for picks once all games in the current week have a result entered.
+      auto_unlock_weeks_note: "Week 1 must always be opened manually. Subsequent weeks unlock automatically when all games in the previous week are finished."
+      display_title: Display
+      default_week_view: Default week on Picks page
+      week_view_current: Current week (auto-detect)
+      week_view_first: Always show Week 1
+      default_week_view_help: What week users see when they first open the Picks page.
+      confidence_title: Confidence Mode
+      confidence_enabled: Enable confidence ratings (1–10 per pick)
+      confidence_help: When enabled, users rate their confidence in each pick from 1 to 10. Correct picks score their confidence value as points instead of 1 point each.
+      confidence_penalty: Penalty for incorrect high-confidence picks
+      penalty_none: No penalty
+      penalty_half: Soft penalty (lose half confidence value)
+      penalty_full: Full penalty (lose full confidence value)
+      penalty_none_help: Incorrect picks score 0 points regardless of confidence. No risk, but also no incentive to be accurate with ratings.
+      penalty_half_help: "Incorrect picks deduct half their confidence value (rounded down). Example: confidence 8 wrong = −4 pts. Balanced risk/reward."
+      penalty_full_help: "Incorrect picks deduct their full confidence value. Example: confidence 8 wrong = −8 pts. High risk, high reward — rewards accuracy."
+
+      polling_title: Live Score Polling
+      espn_polling_enabled: Enable ESPN live score polling
+      espn_polling_help: When enabled, the server will poll ESPN every 5 minutes on game days to update live scores automatically.
+      polling_note: Live polling runs via the server scheduler every 5 minutes. Requires schedule:work to be running (Supervisor). Enable this only during the season.
+
+    games:
+      total_label: games
+      all_weeks: All Weeks
+      all_statuses: All Statuses
+      search_placeholder: Search teams...
+      no_games: No games found.
+      enter_result: Enter Result
+      result_preview: Result
+      load_more: Load More
+      sync_scores_button: Sync Scores
+      sort_date_asc: Date (Earliest First)
+      sort_date_desc: Date (Latest First)
+      sort_status: Status
+      col_home: Home
+      col_away: Away
+      col_date: Date
+      col_status: Status
+      col_score: Score
+
+    placeholder:
+      coming_soon: This section will be available in a future update.
+
+  lib:
+
+    nav:
+      picks: Picks
+      matches: Games
+      my_picks: My Picks
+      leaderboard: Leaderboard
+      history: History
+
+    common:
+      home: Home
+      away: Away
+      vs: vs
+      season: Season
+      week: Week
+      team: Player
+      date: Date
+      status: Status
+      score: Score
+      result: Result
+      match: Match
+      picked: Picked
+      points: Points
+
+    status:
+      scheduled: Scheduled
+      closed: Closed
+      finished: Finished
+      correct: Correct
+      incorrect: Incorrect
+      pending: Pending
+
+    messages:
+      no_data: No data found.
+      no_matches: No games found.
+      saved: Saved successfully.
+      deleted: Deleted successfully.
+      delete_confirm: Are you sure?
+      login_required: Please log in to participate.
+
+# ── Additions ─────────────────────────────────────────────────────────────────
+# These are appended and will be merged by the YAML parser correctly
+# when placed at correct indentation in the actual file.
+# For safety we append here — Flarum reads the full file fine with duplicates
+# at the key level; last value wins. These are new keys so no conflict.
