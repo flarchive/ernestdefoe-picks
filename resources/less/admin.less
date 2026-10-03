@@ -1,0 +1,810 @@
+// ============================================================
+// Picks Admin — Complete stylesheet
+// ============================================================
+
+// ─── Tab navigation ──────────────────────────────────────────
+.PicksAdminPage-tabs {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 4px;
+  padding: 0 0 20px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--control-bg);
+
+  .PicksAdminPage-tab {
+    white-space: nowrap;
+    flex-shrink: 0;
+    i { margin-right: 6px; }
+  }
+}
+
+.PicksAdminPage-content {
+  min-height: 300px;
+}
+
+// ─── Generic tab layout ──────────────────────────────────────
+.PicksTab-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 4px;
+    color: var(--body-color);
+    i { margin-right: 8px; color: var(--muted-color); }
+  }
+}
+
+.PicksTab-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+  align-items: flex-start;
+  padding-top: 2px;
+}
+
+.PicksTab-meta {
+  color: var(--muted-color);
+  font-size: 13px;
+  margin: 0;
+}
+
+// Filters row
+.PicksTab-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+
+  .FormControl {
+    flex: 1;
+    min-width: 140px;
+    max-width: 240px;
+  }
+}
+
+// ─── Alert banner ────────────────────────────────────────────
+.PicksAlert {
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 16px;
+
+  &--info {
+    background: var(--control-bg);
+    border-left: 3px solid var(--primary-color);
+  }
+
+  &--error {
+    background: rgba(163, 45, 45, 0.08);
+    border-left: 3px solid #a32d2d;
+    color: #a32d2d;
+  }
+}
+
+// ─── Empty state ─────────────────────────────────────────────
+.PicksEmptyState {
+  text-align: center;
+  padding: 3rem 0;
+  color: var(--muted-color);
+  font-size: 14px;
+}
+
+.PicksPlaceholder {
+  text-align: center;
+  padding: 3rem 0;
+  color: var(--muted-color);
+  font-size: 14px;
+}
+
+// ─── Card list table ─────────────────────────────────────────
+.PicksCardList {
+  border: 1px solid var(--control-bg);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.PicksCardList-header {
+  display: grid;
+  grid-template-columns: 56px 1fr 140px 80px 140px 100px;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--control-bg);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted-color);
+}
+
+.PicksCardList-row {
+  display: grid;
+  grid-template-columns: 56px 1fr 140px 80px 140px 100px;
+  gap: 12px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--control-bg);
+  align-items: center;
+
+  &:last-child { border-bottom: none; }
+  &:hover { background: rgba(0,0,0,0.02); }
+}
+
+.PicksCardList-cell {
+  font-size: 13px;
+  color: var(--body-color);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &--primary { font-weight: 500; }
+  &--muted   { color: var(--muted-color); }
+
+  &--actions {
+    display: flex;
+    gap: 4px;
+    justify-content: flex-end;
+    white-space: nowrap;
+    overflow: visible;
+  }
+}
+
+// ─── Team logos ──────────────────────────────────────────────
+.PicksTeamLogo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  border-radius: 4px;
+
+  &--placeholder {
+    background: var(--control-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted-color);
+  }
+
+  &--small {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+// ─── Seasons tab ─────────────────────────────────────────────
+.PicksCardList-header--seasons,
+.PicksCardList-row--seasons {
+  grid-template-columns: 60px 110px 1fr 1fr 120px;
+}
+
+// ─── Competitions ────────────────────────────────────────────
+.PicksCardList-header--leagues,
+.PicksCardList-row--leagues {
+  grid-template-columns: 1fr 200px 130px 90px;
+}
+
+.PicksLeagues {
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  // A rule rather than a card: this is the same page as the weeks below it,
+  // and boxing it would suggest two screens where there is one.
+  border-bottom: 1px solid var(--control-bg);
+}
+
+.PicksLeagues-form {
+  display: grid;
+  grid-template-columns: 1fr 110px 1fr auto;
+  gap: 12px;
+  align-items: end;
+  margin-bottom: 16px;
+  padding: 14px;
+  border-radius: 8px;
+  background: var(--control-bg);
+
+  .Form-group { margin: 0; }
+
+  label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--muted-color);
+  }
+}
+
+@media (max-width: 767px) {
+  .PicksCardList-header--leagues,
+  .PicksCardList-row--leagues {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .PicksLeagues-form { grid-template-columns: 1fr; }
+}
+
+// ─── Games tab ───────────────────────────────────────────────
+.PicksCardList-header--games,
+.PicksCardList-row--games {
+  grid-template-columns: 1fr 1fr 120px 100px 80px 50px;
+}
+
+.PicksTeamCell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+
+  span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+// ─── Status / type badges ────────────────────────────────────
+.PicksBadge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+
+  &--regular {
+    background: rgba(52, 152, 219, 0.12);
+    color: #2980b9;
+  }
+
+  &--postseason {
+    background: rgba(243, 156, 18, 0.15);
+    color: #d68910;
+  }
+
+  &--scheduled {
+    background: rgba(127, 140, 141, 0.12);
+    color: var(--muted-color);
+  }
+
+  &--in_progress {
+    background: rgba(39, 174, 96, 0.15);
+    color: #1e8449;
+    animation: picksPulse 1.5s ease-in-out infinite;
+  }
+
+  &--closed {
+    background: rgba(243, 156, 18, 0.15);
+    color: #d68910;
+  }
+
+  &--finished {
+    background: rgba(39, 174, 96, 0.12);
+    color: #1e8449;
+  }
+}
+
+@keyframes picksPulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.55; }
+}
+
+// ─── Pagination ──────────────────────────────────────────────
+.PicksPagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px 0 4px;
+
+  &-info {
+    font-size: 13px;
+    color: var(--muted-color);
+  }
+}
+
+// Load more
+.PicksLoadMore {
+  display: flex;
+  justify-content: center;
+  padding: 16px 0;
+}
+
+// ─── Inline edit input ───────────────────────────────────────
+.FormControl--small {
+  height: 30px;
+  padding: 3px 8px;
+  font-size: 13px;
+}
+
+// ─── Settings sections ───────────────────────────────────────
+.PicksSettingsSection {
+  margin-bottom: 2rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--control-bg);
+
+  &:last-of-type { border-bottom: none; }
+
+  &-title {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted-color);
+    margin: 0 0 16px;
+  }
+}
+
+// Inline input + unit label
+.PicksInputRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &-input { width: 100px; }
+  &-label { font-size: 13px; color: var(--muted-color); }
+}
+
+// Sync status list
+.PicksSyncStatus {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 4px;
+
+  &-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+
+    i     { color: var(--muted-color); width: 16px; text-align: center; flex-shrink: 0; }
+    span  { color: var(--muted-color); flex: 1; }
+    strong { color: var(--body-color); }
+  }
+}
+
+// Help note with icon
+.PicksHelpNote {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  i { margin-top: 2px; color: var(--primary-color); flex-shrink: 0; }
+}
+
+// Result modal preview box
+.PicksResultPreview {
+  padding: 10px 14px;
+  background: var(--control-bg);
+  border-radius: 8px;
+  margin: 0;
+  font-size: 13px;
+}
+
+// ─── Admin leaderboard tab ───────────────────────────────────
+.PicksAdminLeaderboard {
+  border: 1px solid var(--control-bg);
+  border-radius: 10px;
+  overflow: hidden;
+
+  &-head {
+    display: grid;
+    grid-template-columns: 48px 1fr 52px 44px 44px 52px 56px;
+    padding: 10px 14px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted-color);
+    background: var(--control-bg);
+    border-bottom: 1px solid var(--control-bg);
+  }
+
+  &-row {
+    display: grid;
+    grid-template-columns: 48px 1fr 52px 44px 44px 52px 56px;
+    padding: 12px 14px;
+    font-size: 13px;
+    align-items: center;
+    border-bottom: 1px solid var(--control-bg);
+    transition: background 0.1s;
+
+    &:last-child { border-bottom: none; }
+    &:hover { background: rgba(0,0,0,0.02); }
+
+    &--gold   { background: rgba(212, 175, 55, 0.08); }
+    &--silver { background: rgba(169, 169, 169, 0.08); }
+    &--bronze { background: rgba(205, 127, 50, 0.08); }
+  }
+
+  &-rank { display: flex; align-items: center; }
+
+  &-user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow: hidden;
+  }
+
+  &-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 500;
+  }
+
+  &-right { text-align: right; }
+
+  &-pts {
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+}
+
+// Rank medals
+.PicksRankMedal {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.PicksRankNum {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted-color);
+}
+
+// Admin avatar
+.PicksAdminAvatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+
+  &--initials {
+    background: var(--primary-color);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 600;
+  }
+}
+
+// Movement badge (admin)
+.PicksMovementBadge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 1px 5px;
+  border-radius: 4px;
+  flex-shrink: 0;
+
+  &--up   { background: rgba(39, 174, 96, 0.12); color: #1e8449; }
+  &--down { background: rgba(163, 45, 45, 0.10); color: #a32d2d; }
+}
+
+// ─── Danger Zone ─────────────────────────────────────────────
+.PicksDangerZone {
+  margin-top: 2rem;
+  padding: 20px;
+  border: 1px solid rgba(163, 45, 45, 0.3);
+  border-radius: 10px;
+  background: rgba(163, 45, 45, 0.04);
+
+  &-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #a32d2d;
+    margin: 0 0 8px;
+    i { margin-right: 6px; }
+  }
+
+  &-description {
+    font-size: 13px;
+    color: var(--muted-color);
+    margin: 0 0 16px;
+  }
+
+  &-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 16px;
+    background: var(--body-bg);
+    border: 1px solid var(--control-bg);
+    border-radius: 8px;
+
+    strong {
+      display: block;
+      font-size: 13px;
+      color: var(--body-color);
+      margin-bottom: 3px;
+    }
+
+    p {
+      font-size: 12px;
+      color: var(--muted-color);
+      margin: 0;
+    }
+
+    .Button {
+      flex-shrink: 0;
+    }
+
+    &--severe {
+      border-color: rgba(163, 45, 45, 0.25);
+      background: rgba(163, 45, 45, 0.03);
+    }
+  }
+}
+
+// Danger button style
+.Button--danger {
+  background: #a32d2d;
+  color: #fff;
+  border-color: #a32d2d;
+
+  &:hover { background: #8b2525; border-color: #8b2525; }
+  &:disabled { opacity: 0.5; cursor: not-allowed; }
+}
+
+// ─── Admin mobile fixes ───────────────────────────────────────
+@media (max-width: 767.98px) {
+
+  // Teams tab — collapse to show logo, name, abbrev, actions only
+  .PicksCardList-header,
+  .PicksCardList-row {
+    grid-template-columns: 44px 1fr 60px 80px 80px;
+
+    // Hide conference column (3rd child)
+    > :nth-child(3) { display: none; }
+  }
+
+  // Seasons tab — collapse dates column
+  .PicksCardList-header--seasons,
+  .PicksCardList-row--seasons {
+    grid-template-columns: 50px 90px 1fr 80px;
+
+    // Hide dates column (3rd child)
+    > :nth-child(3) { display: none; }
+  }
+
+  // Games tab — collapse to home, away, status, action
+  .PicksCardList-header--games,
+  .PicksCardList-row--games {
+    grid-template-columns: 1fr 1fr 80px 44px;
+
+    // Hide date and score columns
+    > :nth-child(3) { display: none; }
+    > :nth-child(5) { display: none; }
+  }
+
+  // Leaderboard admin — collapse
+  .PicksAdminLeaderboard {
+    &-head,
+    &-row {
+      grid-template-columns: 40px 1fr 48px 48px;
+
+      > :nth-child(4),
+      > :nth-child(5),
+      > :nth-child(6) { display: none; }
+    }
+  }
+
+  // Danger zone stack on mobile
+  .PicksDangerZone-action {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+    .Button { align-self: flex-start; }
+  }
+
+  // Settings input row
+  .PicksInputRow {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .PicksAdminPage-tabs {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    scrollbar-width: none;
+    &::-webkit-scrollbar { display: none; }
+
+    .PicksAdminPage-tab {
+      padding: 6px 10px;
+      font-size: 12px;
+      flex: 1 1 auto;
+      text-align: center;
+      i { margin-right: 4px; }
+    }
+  }
+}
+
+// ─── Stats tab — AnalyticsCard pattern ───────────────────────
+// Card grid matches analytics extension exactly
+.PicksStats-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 8px;
+
+  @media (max-width: 767.98px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// AnalyticsCard — copied verbatim from analytics extension CSS
+.AnalyticsCard {
+  background: var(--control-bg);
+  border-radius: 8px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+
+  &-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    i {
+      font-size: 16px;
+      color: #fff;
+    }
+  }
+
+  &-body { min-width: 0; overflow: hidden; }
+
+  &-value {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--body-color);
+    line-height: 1.1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &-label {
+    font-size: 11px;
+    color: var(--muted-color);
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    margin-top: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+// Stats section grouping
+.PicksStatsSection {
+  margin-bottom: 2rem;
+
+  &-title {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted-color);
+    margin-bottom: 12px;
+
+    i { margin-right: 6px; }
+  }
+}
+
+// Footnote below cards
+.PicksStats-footnote {
+  font-size: 12px;
+  color: var(--muted-color);
+  margin-top: 8px;
+
+  i { margin-right: 4px; }
+  strong { color: var(--body-color); }
+}
+
+// Contested matchup bars
+.PicksStats-contestedList {
+  margin-top: 12px;
+  border: 1px solid var(--control-bg);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.PicksStats-contestedTitle {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted-color);
+  padding: 8px 14px;
+  background: var(--control-bg);
+  border-bottom: 1px solid var(--control-bg);
+}
+
+.PicksStats-contestedRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--control-bg);
+  font-size: 13px;
+
+  &:last-child { border-bottom: none; }
+
+  @media (max-width: 767.98px) {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+}
+
+.PicksStats-contestedMatchup {
+  width: 140px;
+  flex-shrink: 0;
+  font-weight: 500;
+  color: var(--body-color);
+
+  @media (max-width: 767.98px) { width: 100%; }
+}
+
+.PicksStats-contestedBar {
+  flex: 1;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  background: var(--control-bg);
+  min-width: 80px;
+}
+
+.PicksStats-contestedFill {
+  height: 100%;
+
+  &--home { background: var(--primary-color); opacity: 0.8; }
+  &--away { background: var(--muted-color);   opacity: 0.5; }
+}
+
+.PicksStats-contestedSplit {
+  font-size: 12px;
+  color: var(--muted-color);
+  flex-shrink: 0;
+  width: 90px;
+  text-align: right;
+}
+
+.PicksStats-contestedTotal {
+  font-size: 11px;
+  color: var(--muted-color);
+  flex-shrink: 0;
+  width: 60px;
+  text-align: right;
+}
+
+// ─── Dark mode logo swapping (Teams tab) ─────────────────────
+.PicksTeamLogo--light { display: block; }
+.PicksTeamLogo--dark  { display: none; }
+
+[data-theme="dark"],
+[data-theme="dark-hc"] {
+  .PicksTeamLogo--light { display: none; }
+  .PicksTeamLogo--dark  { display: block; }
+}
