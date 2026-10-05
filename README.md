@@ -2,13 +2,24 @@
 
 > **Read-only archive of released versions of ernestdefoe/picks.** Not for installation: use [Packagist](https://packagist.org/packages/ernestdefoe/picks) or the [upstream repository](https://github.com/ernestdefoe/picks).
 
-**0** versions archived · Latest: [`2.13.3`](https://github.com/flarchive/ernestdefoe-picks/tree/archive/v2.13.3) · License: `MIT` · Flarum: `^2.0.0-beta.8`
+**40** versions archived · Latest: [`2.13.3`](https://github.com/flarchive/ernestdefoe-picks/tree/archive/v2.13.3) · License: `MIT` · Flarum: `^2.0.0-beta.8`
 
 ## Archived Versions
 
 | Version | Released | Flarum | Source |
 |---|---|---|---|
-| — | — | — | — |
+| `2.0.0` | 2026-05-02 | `^2.0.0-beta.8` | [Browse](https://github.com/flarchive/ernestdefoe-picks/tree/archive/v2.0.0) |
+| `2.0.1` | 2026-05-30 | `^2.0.0-beta.8` | [Browse](https://github.com/flarchive/ernestdefoe-picks/tree/archive/v2.0.1) |
+| `2.0.2` | 2026-05-30 | `^2.0.0-beta.8` | [Browse](https://github.com/flarchive/ernestdefoe-picks/tree/archive/v2.0.2) |
+| `2.0.3` | 2026-05-30 | `^2.0.0-beta.8` | [Browse](https://github.com/flarchive/ernestdefoe-picks/tree/archive/v2.0.3) |
+| `2.0.4` | 2026-05-31 | `^2.0.0-beta.8` | [Browse](https://github.com/flarchive/ernestdefoe-picks/tree/archive/v2.0.4) |
+| `2.0.5` | 2026-05-31 | `^2.0.0-beta.8` | [Browse](https://github.com/flarchive/ernestdefoe-picks/tree/archive/v2.0.5) |
+| `2.0.6` | 2026-05-31 | `^2.0.0-beta.8` | [Browse](https://github.com/flarchive/ernestdefoe-picks/tree/archive/v2.0.6) |
+| `2.0.7` | 2026-05-31 | `^2.0.0-beta.8` | [Browse](https://github.com/flarchive/ernestdefoe-picks/tree/archive/v2.0.7) |
+| `2.1.0` | 2026-05-31 | `^2.0.0-beta.8` | [Browse](https://github.com/flarchive/ernestdefoe-picks/tree/archive/v2.1.0) |
+| `2.1.1` | 2026-05-31 | `^2.0.0-beta.8` | [Browse](https://github.com/flarchive/ernestdefoe-picks/tree/archive/v2.1.1) |
+
+[View all 40 versions](https://github.com/flarchive/ernestdefoe-picks/tags)
 
 Catalog entry: [packages/ernestdefoe-picks.json](https://github.com/flarchive/archive-index/blob/main/packages/ernestdefoe-picks.json)
 
