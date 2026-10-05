@@ -1,0 +1,506 @@
+ernestdefoe-picks:
+
+  admin:
+
+    nav:
+      picks: Picks
+      teams: Teams
+      sync: Sync & Settings
+      seasons: Seasons & Weeks
+      games: Games
+      confidence: Confidence Games
+      scores: Leaderboard & Scores
+      stats: Stats
+      settings: Picks Settings
+
+    page:
+      description: College football pick'em management
+
+    permissions:
+      manage: Manage Picks
+      make_picks: Make Picks
+      view: View Picks
+      view_history: "View members' Picks History"
+
+    common:
+      save: Save
+      edit: Edit
+      delete: Delete
+      cancel: Cancel
+      last_sync: Last sync
+      never: Never
+      saved: Settings saved.
+      save_failed: The settings could not be saved.
+      prev: Previous
+      next: Next
+      page_of: "Page {page} of {pages}"
+      col_player: Player
+      col_points: Pts
+      col_won: W
+      col_lost: L
+      col_picks: Picks
+      col_accuracy: Acc
+      no_schedule: No schedule synced yet. Sync a schedule from Seasons & Weeks first.
+      coming_soon: This section will be available in a future update.
+
+    teams:
+      edit_title: Edit Team
+      sync_button: Sync Teams
+      sync_logos_button: Sync Logos
+      search_placeholder: Search teams...
+      all_conferences: All Conferences
+      logo_filter_all: "Logo: All"
+      logo_filter_has: Has Logo
+      logo_filter_missing: Missing Logo
+      logo_filter_custom: Custom Logo
+      total_label: teams
+      no_teams: No teams found.
+      refresh_logo: Re-download logos from ESPN
+      sync_done: "Sync complete. {created} created, {updated} updated."
+      sync_failed: The team sync failed. Check the API key and the server logs.
+      logos_running: "Downloading logos… {saved} saved, {remaining} to go."
+      logos_done: "Logo sync complete. {saved} saved, {failed} failed."
+      logos_failed: The logo sync failed. Check the server logs.
+      logo_both: Light and dark
+      logo_standard: Light only
+      logo_custom: Custom
+      logo_missing: Missing
+      dark_logo_alt: "{name}, dark logo"
+      col_logo: Logo
+      col_name: Team
+      col_conference: Conference
+      col_abbrev: Abbrev
+      col_logo_status: Logo Status
+      fields:
+        name: Team Name
+        abbreviation: Abbreviation
+        conference: Conference
+        logo_standard: Standard Logo Path / URL
+        logo_dark: Dark Logo Path / URL
+        logo_custom: Custom Logo (protect from sync)
+        logo_custom_help: When checked, the sync process will never overwrite this team's logos.
+
+    leagues:
+      title: Competitions
+      description: >-
+        A season belongs to one competition, and that is what decides
+        everything else: which provider fills its fixtures, which words a Game
+        Day recap is written in, and which scoring rules a Fantasy league
+        starts from.
+      add: New season
+      cancel: Cancel
+      create: Create season
+      col_season: Season
+      col_league: Competition
+      col_sport: Scored as
+      field_name: Name
+      field_year: Year
+      field_league: Competition
+      name_placeholder: 2026 NFL Season
+      no_seasons: No seasons yet. Create one, or sync the college schedule.
+      provider_cfbd: CollegeFootballData
+      sync_espn: Fetch fixtures and scores from ESPN
+      sync_done: "ESPN sync complete. Games: +{created} created, {updated} updated. Teams: {teams}."
+      sync_failed: ESPN sync failed. Check the server logs.
+      season_created: Season created.
+      create_failed: The season could not be created.
+      league_saved: "{season} moved."
+      save_failed: That change could not be saved.
+      registry_missing: >-
+        No competitions were sent by the server. That is a broken install
+        rather than an empty list — every build ships the registry.
+    seasons:
+      sync_button: Sync Schedule
+      seasons_label: seasons
+      no_weeks: No weeks found. Click Sync Schedule to import.
+      col_week: Week
+      col_type: Type
+      col_dates: Dates
+      col_name: Name
+      sync_done: "Sync complete. Weeks: {weeksCreated} created, {weeksUpdated} updated. Games: {gamesCreated} created, {gamesUpdated} updated."
+      sync_failed: The schedule sync failed. Check the API key and the server logs.
+      week_short: "Wk {number}"
+      postseason_short: Post
+      type_regular: Regular
+      type_postseason: Postseason
+      close_week: Close the week (lock picks)
+      open_week: Open the week (allow picks)
+      save_name: Save the name
+      cancel_edit: Cancel
+
+    sync:
+      status_title: Last Sync Status
+      last_teams: Teams
+      last_schedule: Schedule
+      last_scores: Scores
+      api_title: API Configuration
+      cfbd_api_key: CFBD API Key
+      cfbd_api_key_help: Get your free API key at collegefootballdata.com
+      cfbd_api_key_placeholder: Your CFBD API key
+      season_year: Season Year
+      season_year_help: The year to sync teams, schedule, and scores for.
+      conference_filter: Conference Filter
+      conference_filter_placeholder: e.g. SEC (leave blank for all FBS)
+      conference_filter_help: Leave blank to sync all FBS teams. Enter a conference abbreviation (e.g. SEC) to limit syncs to one conference.
+      options_title: Sync Options
+      sync_regular_season: Sync regular season games
+      sync_postseason: Sync postseason / bowl games
+
+      danger_title: Danger Zone
+      danger_description: These actions are irreversible. Use with caution.
+      reset_schedule_title: Reset Schedule Data
+      reset_schedule_description: Deletes all seasons, weeks, games, picks, and scores. Teams and logos are kept.
+      reset_schedule_button: Reset Schedule
+      reset_all_title: Reset All Data
+      reset_all_description: Deletes everything — teams, logos, seasons, weeks, games, picks, and scores. Requires double confirmation.
+      reset_all_button: Reset Everything
+      reset_schedule_confirm: "This permanently deletes every season, week, game, pick and score. Teams and logos are kept.\n\nThis cannot be undone. Continue?"
+      reset_all_confirm: "This permanently deletes ALL Picks data: teams, logos, seasons, weeks, games, picks and scores.\n\nThis cannot be undone. Continue?"
+      reset_all_confirm_again: "Second confirmation: delete ALL Picks data, teams and logos included?"
+      reset_done: "Reset complete. Deleted: {items}."
+      reset_nothing: "Reset complete. There was nothing to delete."
+      reset_failed: The reset failed. Check the server logs.
+      count_seasons: "{count, plural, one {# season} other {# seasons}}"
+      count_weeks: "{count, plural, one {# week} other {# weeks}}"
+      count_games: "{count, plural, one {# game} other {# games}}"
+      count_picks: "{count, plural, one {# pick} other {# picks}}"
+      count_scores: "{count, plural, one {# score} other {# scores}}"
+      count_teams: "{count, plural, one {# team} other {# teams}}"
+
+    settings:
+      locking_title: Pick Locking
+      nav_label: Sidebar nav label
+      nav_label_help: The name shown in the forum sidebar navigation. Default is "Picks".
+      lock_offset: Lock picks before kickoff
+      lock_offset_help: Set to 0 to lock picks exactly at kickoff. Increase to require picks be submitted earlier.
+      minutes_before_kickoff: minutes before kickoff
+      minutes: minutes
+      auto_unlock_weeks: Automatically unlock the next week when the previous week is complete
+      auto_unlock_weeks_help: Once every game in the latest open week is over, the next week with games still to play opens for picks. A game counts as over when it is final, or 36 hours after its kickoff if it never gets a result (postponed, cancelled or never reported). Checked every 15 minutes, and straight away when you turn this on.
+      auto_unlock_weeks_note: "Open the first week by hand. Weeks already open stay open, and the Picks page keeps showing the finished week for a day after its last game before moving on."
+      display_title: Display
+      default_week_view: Default week on Picks page
+      week_view_current: Current week (auto-detect)
+      week_view_first: Always show Week 1
+      default_week_view_help: What week users see when they first open the Picks page.
+      confidence_title: Confidence Mode
+      confidence_enabled: Enable confidence ratings (1–10 per pick)
+      confidence_help: When enabled, users rate their confidence in each pick from 1 to 10. Correct picks score their confidence value as points instead of 1 point each.
+      confidence_penalty: Penalty for incorrect high-confidence picks
+      penalty_none: No penalty
+      penalty_half: Soft penalty (lose half confidence value)
+      penalty_full: Full penalty (lose full confidence value)
+      penalty_none_help: Incorrect picks score 0 points regardless of confidence. No risk, but also no incentive to be accurate with ratings.
+      penalty_half_help: "Incorrect picks deduct half their confidence value (rounded down). Example: confidence 8 wrong = −4 pts. Balanced risk/reward."
+      penalty_full_help: "Incorrect picks deduct their full confidence value. Example: confidence 8 wrong = −8 pts. High risk, high reward — rewards accuracy."
+
+      c10_title: Confidence Contest
+      c10_enabled: Run a Confidence contest beside the full board
+      c10_help: "A second, harder game on the same weeks. Each week the biggest matchups are chosen automatically (you can change them under Confidence Games), and members pick a winner in each and rank them from the top value down to 1. A correct pick scores its value. Separate standings; the full board is not affected."
+      c10_games: Games per week
+      c10_games_unit: games (3 to 20)
+      c10_games_help: "The contest is named after this number: 10 makes it Confidence 10. Change it between weeks, not during one."
+      c10_penalty: Penalty for a wrong pick
+
+      polling_title: Live Score Polling
+      espn_polling_enabled: Enable ESPN live score polling
+      espn_polling_help: When enabled, the server will poll ESPN every 5 minutes on game days to update live scores automatically.
+      polling_note: Live polling runs via the server scheduler every 5 minutes. Requires schedule:work to be running (Supervisor). Enable this only during the season.
+
+    games:
+      total_label: games
+      all_weeks: All Weeks
+      all_statuses: All Statuses
+      search_placeholder: Search teams...
+      no_games: No games found.
+      enter_result: Enter Result
+      result_preview: Result
+      load_more: Load More
+      sync_scores_button: Sync Scores
+      sort_date_asc: Date (Earliest First)
+      sort_date_desc: Date (Latest First)
+      sort_status: Status
+      col_home: Home
+      col_away: Away
+      col_date: Date
+      col_status: Status
+      col_score: Score
+      status_live: Live
+      status_final: Final
+      sync_started_failed: The score sync did not start. Check the API key and the server logs.
+      sync_still_running: The sync is still running. Refresh in a moment to see the result.
+      sync_done: "Sync complete. {updated, plural, one {# game} other {# games}} updated, {scored} scoring batches run, {skipped} skipped."
+      sync_failed: The score sync failed.
+      sync_status_failed: The sync status could not be checked. Check the server logs.
+      home_label: "{team} (home)"
+      away_label: "{team} (away)"
+      home_team: Home team
+      away_team: Away team
+      wins: "{team} wins"
+      tied: A tie. Check the scores before saving.
+
+    leaderboard:
+      scope_week: Week
+      scope_season: Season
+      scope_alltime: All time
+      load_failed: The leaderboard could not be loaded.
+      weeks_failed: The weeks could not be loaded.
+      empty: No scores yet for this period.
+
+    stats:
+      title: Stats
+      intro: Pick'em analytics for admins
+      refresh: Refresh
+      load_failed: The stats could not be loaded.
+      participation: Participation
+      total_players: Total players
+      picked_this_week: Picked this week
+      participation_rate: Participation rate
+      yet_to_pick: Yet to pick
+      accuracy_title: Accuracy & scoring
+      avg_accuracy_season: Average accuracy (season)
+      avg_accuracy_week: Average accuracy (this week)
+      upset_rate: Upset rate
+      most_picked: Most picked team
+      most_picked_note: "Most picked team: <strong>{team}</strong>, {count, plural, one {# pick} other {# picks}}"
+      coverage: Game coverage
+      results_entered: Results entered
+      awaiting_results: Awaiting results
+      no_picks: Games with no picks
+      consensus: Consensus games
+      most_contested: Most contested matchups
+      picks_count: "{count, plural, one {# pick} other {# picks}}"
+
+    block:
+      name: Pick'em Standings
+      title: Title
+      scope: Standings
+      scope_alltime: All time
+      scope_season: This season
+      limit: How many
+      hide_empty: Hide when nobody has picked
+      hide_empty_help: Before the first week of a season there is nothing to rank.
+
+    confidence:
+      title: "Confidence {count}"
+      intro: "The games this week's Confidence contest is played on. They are chosen when the week opens: games between two ranked teams first, then games with one, then the best records. Change them freely until the first chosen game locks."
+      week_label: Week
+      disabled: The Confidence contest is turned off. Turn it on under Picks Settings; nothing here is shown to members until you do.
+      open_badge: Open to changes
+      frozen_badge: Frozen
+      frozen_help: The first chosen game has locked, so the games are fixed for this week.
+      count: "{chosen} of {count} chosen"
+      week_not_open: This week is not open for picks yet. Games are chosen automatically when it opens, or you can choose them now.
+      auto: Choose automatically
+      auto_again: Choose again automatically
+      auto_confirm: Replace the chosen games with the automatic choice? Members' picks on games that drop out are cleared.
+      auto_done: Chosen automatically.
+      chosen_heading: Chosen games
+      chosen_help: "Drag to reorder, or focus a handle and press Alt+Up or Alt+Down. The first game is the tiebreaker: members guess its total points. Taking a game out clears members' picks on it; changing the first game clears their tiebreaker guesses."
+      none_chosen: No games chosen yet.
+      tiebreaker: Tiebreaker
+      handle_label: "Move {game}"
+      remove: Remove
+      remove_label: "Remove {game}"
+      add_heading: Other games this week
+      add_help: Biggest matchups first. Games that have already started can't be added.
+      full_help: "All {count} places are taken. Remove a game to add another."
+      add: Add
+      add_label: "Add {game}"
+      started: Started
+      filter_placeholder: Filter by team
+      errors:
+        frozen: The first chosen game has locked, so the games can no longer change.
+        too_many: "The contest holds {count} games. Remove one first."
+        started: That game has already started or locked.
+        no_games: There are no games left to choose this week.
+        not_in_week: That game is not in this week.
+        generic: That did not save. Reload and try again.
+
+    placeholder:
+      coming_soon: This section will be available in a future update.
+
+  lib:
+
+    nav:
+      picks: Picks
+      matches: Games
+      my_picks: My Picks
+      leaderboard: Leaderboard
+      history: History
+      this_week: This week
+
+    common:
+      home: Home
+      away: Away
+      vs: vs
+      season: Season
+      week: Week
+      team: Player
+      date: Date
+      status: Status
+      score: Score
+      result: Result
+      match: Match
+      picked: Picked
+      points: Points
+
+    status:
+      scheduled: Scheduled
+      closed: Closed
+      finished: Finished
+      correct: Correct
+      incorrect: Incorrect
+      pending: Pending
+
+    messages:
+      no_data: No data found.
+      no_schedule: No schedule has been imported yet.
+      check_back: Check back soon!
+      no_matches: No games found.
+      saved: Saved successfully.
+      deleted: Deleted successfully.
+      delete_confirm: Are you sure?
+      login_required: Please log in to participate.
+
+  forum:
+    nav:
+      profile_history: Picks History
+    week_nav:
+      previous: Previous week
+      next: Next week
+    games:
+      week_not_open: Picks for this week are not yet open. Check back soon!
+      neutral_site: Neutral site
+      correct: "{count, plural, one {Correct · +# pt} other {Correct · +# pts}}"
+      incorrect: Incorrect
+      pending: Pick saved · awaiting result
+      no_pick: Cutoff passed · no pick
+      confidence_label: Confidence
+      confidence_hint_full: Wrong costs the value
+      confidence_hint_half: Wrong costs half
+    my_picks:
+      points: "{count, plural, one {+# pt} other {+# pts}}"
+      pending: Pending
+      pending_value: "Pending · {value}"
+    leaderboard:
+      all_time: All time
+      final_week: Final week
+      col_points: Pts
+      col_record: W–L
+      col_accuracy: Acc
+      season_ended: "{season} has ended. The final standings are in the History tab."
+      final_standings: "{days, plural, one {Final standings · {season} ended # day ago} other {Final standings · {season} ended # days ago}}"
+      season_complete: Season complete · Final standings locked
+      days_ago: "{days, plural, one {# day ago} other {# days ago}}"
+    history:
+      empty: No completed seasons yet. History appears here once the first season ends.
+      players: "{count, plural, one {# player} other {# players}}"
+      no_standings: No standings recorded for this season.
+    confidence:
+      tab: "Confidence {count}"
+      full_board: Full board
+      intro: "Pick a winner in each game and rank them: {count} for the one you are surest of, down to 1. A correct pick scores its number."
+      penalty_half: A wrong pick costs half its number.
+      penalty_full: A wrong pick costs its whole number.
+      not_chosen: This week's Confidence games have not been chosen yet.
+      chosen_when_open: Confidence games are chosen when the week opens for picks.
+      week_closed: This week is not open for picks yet.
+      log_in: Log in to play.
+      no_permission: You don't have permission to make picks.
+      your_ranking: Your ranking
+      drag_hint: Drag, or Alt+Up / Alt+Down, to rank
+      locked_heading: Locked in
+      handle_label: "{game}, worth {value}. Press Alt+Up or Alt+Down to move it."
+      handle_title: Drag to rank
+      value_label: "Value for {game}"
+      tiebreaker_tag: Tiebreaker
+      tiebreaker_label: "Tiebreaker: total points in {game}"
+      tiebreaker_placeholder: e.g. 52
+      tiebreaker_help: Closest guess wins a tie on points.
+      tiebreaker_actual: "Actual total: {total}"
+      no_pick: No pick
+      correct: "Correct · +{points}"
+      incorrect: Incorrect
+      incorrect_penalty: "Incorrect · −{points}"
+      saving: Saving…
+      saved: Saved
+      no_standings: No Confidence picks have been scored yet.
+      no_history: No completed Confidence seasons yet.
+      col_points: Pts
+      col_record: W–L
+      col_accuracy: Acc
+      col_tiebreaker: TB
+      col_tiebreaker_title: How far the tiebreaker guess was from the real total
+      errors:
+        locked: That game has locked. Your board has been reloaded.
+        duplicate_value: Two games had the same number. Your board has been reloaded.
+        out_of_range: A number was out of range. Your board has been reloaded.
+        not_in_contest: That game is no longer in this week's contest. Your board has been reloaded.
+        bad_tiebreaker: The tiebreaker must be a whole number of points.
+        disabled: The Confidence contest has been turned off.
+        generic: That did not save. Your board has been reloaded.
+    game:
+      time_tba: time TBA
+      locks_at: "picks lock {time}"
+      locked: Locked
+    profile:
+      tab_alltime: All time
+      tab_season: This season
+      tab_week: This week
+      loading: Loading…
+      history_heading: Pick History
+      load_failed: The pick history could not be loaded.
+      c10_empty: No Confidence picks have been scored yet.
+      no_history: No season history yet.
+      empty_week: No results recorded this week yet.
+      empty_season: No results recorded this season yet.
+      empty_alltime: No results recorded yet.
+      in_progress: In progress
+      active: Active
+      season_meta: "{weeks, plural, one {# week} other {# weeks}} · {picks, plural, one {# pick submitted} other {# picks submitted}}"
+      points_value: "{count, plural, one {# pt} other {# pts}}"
+      points: Points
+      accuracy: Accuracy
+      rank: Rank
+      final_rank: Final rank
+      no_picks: No picks
+      col_week: Week
+      col_won: W
+      col_lost: L
+      col_accuracy: Acc
+      col_points: Pts
+      col_rank: Rank
+      col_tiebreaker: TB
+      footer_picks: "{count, plural, one {<strong>{count}</strong> pick} other {<strong>{count}</strong> picks}}"
+      footer_record: "<strong>{correct}</strong> correct · <strong>{wrong}</strong> wrong"
+      footer_points: "{count, plural, one {<strong>{count}</strong> pt} other {<strong>{count}</strong> pts}}"
+    profile_stats:
+      picks_total: Total picks
+      picks_season: Picks this season
+      picks_week: Picks this week
+      correct_wrong: "{correct} correct · {wrong} wrong"
+      accuracy: Accuracy
+      rank: Rank
+      of_players: "{count, plural, one {of # player} other {of # players}}"
+      points: Points
+      best_week: "Best week · {year}"
+      longest_streak: Longest streak
+      streak_sub: consecutive correct picks
+    leaderboard_block:
+      empty: No picks have been scored yet this season.
+
+  api:
+    page_title: College football pick'em
+    weeks:
+      week: "Week {number}"
+      week_of: "Week of {date}"
+      postseason: Postseason
+      bowl_season: Bowl Season
+    standings_post:
+      title: "{week} pick'em standings"
+      intro: "Standings after {week}."
+      row_week: "this week {record}"
+      best: "Best of the week: {name}, {record}."
+      open: "Picks for the next round are open — {url}"
+      outro: Argue with the table below.
