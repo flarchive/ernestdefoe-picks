@@ -1,0 +1,57 @@
+<?php
+
+namespace Resofire\Picks\Service;
+
+use Resofire\Picks\Pick;
+
+/**
+ * Shared pick-statistics queries used by both the admin StatsController and the
+ * public PublicStatsController, so the logic lives in one place.
+ */
+class PickStatsService
+{
+    /**
+     * The single most-picked team across all events (home + away tallies).
+     *
+     * @return array{0: int|null, 1: int} [teamId, pickCount] — teamId null when
+     *                                     there are no picks yet.
+     */
+    public function mostPickedTeam(): array
+    {
+        /*
+         * 🚨 selectRaw() is verbatim — the query builder prefixes only the
+         * identifiers it wraps itself, so the join/where/groupBy below resolve
+         * while a table-qualified column in the select list does not. Left
+         * unprefixed this 500s on any forum with a table prefix configured.
+         */
+        $p = (new Pick())->getConnection()->getTablePrefix();
+
+        $homeTop = Pick::query()
+            ->join('picks_events', 'picks_picks.event_id', '=', 'picks_events.id')
+            ->where('picks_picks.selected_outcome', 'home')
+            ->groupBy('picks_events.home_team_id')
+            ->selectRaw("{$p}picks_events.home_team_id as team_id, COUNT(*) as cnt")
+            ->orderByDesc('cnt')->first();
+
+        $awayTop = Pick::query()
+            ->join('picks_events', 'picks_picks.event_id', '=', 'picks_events.id')
+            ->where('picks_picks.selected_outcome', 'away')
+            ->groupBy('picks_events.away_team_id')
+            ->selectRaw("{$p}picks_events.away_team_id as team_id, COUNT(*) as cnt")
+            ->orderByDesc('cnt')->first();
+
+        $topTeamId = null;
+        $topTeamCnt = 0;
+
+        if ($homeTop && $homeTop->getAttribute('cnt') > $topTeamCnt) {
+            $topTeamId = (int) $homeTop->getAttribute('team_id');
+            $topTeamCnt = (int) $homeTop->getAttribute('cnt');
+        }
+        if ($awayTop && $awayTop->getAttribute('cnt') > $topTeamCnt) {
+            $topTeamId = (int) $awayTop->getAttribute('team_id');
+            $topTeamCnt = (int) $awayTop->getAttribute('cnt');
+        }
+
+        return [$topTeamId, $topTeamCnt];
+    }
+}
